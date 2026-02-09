@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(245, 246, 244);
+    background-color: #f3f3f3;
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid #eee;
@@ -25,7 +25,7 @@
 }
 
 .logo img {
-    height: 70px;
+    height: 40px;
 }
 
 .nav-links {

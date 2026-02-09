@@ -1,0 +1,121 @@
+.gallery {
+    padding: 30px 0;
+    background-color: #eeedec;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-navy);
+    margin-bottom: 12px;
+}
+
+.gallery-header p {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.portfolio-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.portfolio-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: none;
+    opacity: 0.9;
+
+    z-index: 0;
+}
+
+.portfolio-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    border-radius: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.slide img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px rgba(0,0,0,0.25));
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-slider::-webkit-scrollbar { display: none; }
+.portfolio-slider { scrollbar-width: none; }
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.slide img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+    border-radius: 20px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slide img:hover {
+    transform: scale(1.03);
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-nav a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(55, 59, 134, 0.3);
+    transition: all 0.3s ease;
+}
+
+.slider-nav a:hover, .slider-nav a:active {
+    background-color: #373b86;
+    transform: scale(1.3);
+}

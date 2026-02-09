@@ -1,6 +1,6 @@
 .features {
     padding: 70px 0;
-    background-color: #ececec;
+    background-color: #eeedec;
 }
 
 .features-header {
@@ -80,10 +80,10 @@
     transform: translateY(20px);
 }
 
-.brand-red { background-color: #461b34; }
-.brand-blue { background-color: #373c96; }
-.brand-pink { background-color: #f0c7e1; color: #461b34; }
+.brand-red { background-color: #522438; }
+.brand-blue { background-color: #373b86; }
+.brand-pink { background-color: #e6c6d1; color: #522438; }
 
 .brand-pink .feature-text p, .brand-pink .feature-text h3 {
-    color: #461b34;
+    color: #522438;
 }
