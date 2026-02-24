@@ -292,6 +292,34 @@
     </div>
 </div>
 
+<!-- The mascot -->
+<div class="mascot" id="mascot">
+
+    <div class="mascot-card">
+
+        <div class="mascot-bubble">
+            Salut! Sunt Mihaela ♡<br>
+            Te aștept cu drag la mine în salon
+        </div>
+
+        <div class="mascot-clip">
+            <img class="mascot-frame frame-1" src="img/mascot_initial_position.png" alt="">
+            <img class="mascot-frame frame-2" src="img/mascot_second_position.png" alt="">
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    // Show mascot after delay
+    window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            document.getElementById("mascot")?.classList.add("is-visible");
+        }, 2500); // 2.5 seconds delay
+    });
+</script>
+
 </body>
 </html>
 
