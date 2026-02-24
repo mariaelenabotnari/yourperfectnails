@@ -146,71 +146,42 @@ body:has(.popup-overlay:target) {
     box-shadow: 0 10px 20px rgba(100, 117, 233, 0.4);
 }
 
-/* HEADER */
+/* NAVBAR */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.custom-navbar {
+    background-color: #f3f3f3 !important;
+}
+
+.logo-img {
+    height: 70px;
+}
+
+.navbar .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.book-btn {
+    margin-left: auto;
+}
+
+.custom-navbar {
     background-color: #f3f3f3;
     backdrop-filter: blur(10px);
-    z-index: 1000;
     border-bottom: 1px solid #eee;
 }
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-.logo img {
-    height: 80px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
+.navbar .nav-link {
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--dark-navy);
-    font-weight: 500;
+    transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
-    color: var(--brand-blue);
-}
-
-@media (max-width: 480px) {
-    .navbar .container {
-        padding: 10px 15px;
-    }
-
-    .logo img {
-        height: 55px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .nav-cta .btn-primary {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-    }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #6475E9 !important;
 }
 
 /* HERO */
@@ -740,163 +711,6 @@ body:has(.popup-overlay:target) {
     .slider-nav a {
         width: 8px;
         height: 8px;
-    }
-}
-
-/* PRICING */
-
-.pricing {
-    padding: 60px 0;
-    scroll-margin-top: 100px;
-    background-color: #eeedec;
-}
-
-.pricing-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.pricing-header h2 {
-    font-size: 2.5rem;
-    color: #090825;
-    margin-bottom: 15px;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.price-card {
-    padding: 40px;
-    border-radius: 32px;
-    color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.price-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.dark-navy { background-color: #090825; }
-.brand-blue-alt { background-color: #6475E9; }
-.brand-coral { background-color: #ff7956; }
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 20px;
-}
-
-.card-header .material-symbols-outlined {
-    font-size: 2.5rem;
-    opacity: 0.9;
-}
-
-.card-header h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.price-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.price-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 18px;
-    font-size: 1.05rem;
-    position: relative;
-}
-
-.price-list li span:first-child {
-    flex: 1;
-    display: flex;
-    align-items: baseline;
-}
-
-.price-list li span:first-child::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px dotted rgba(255,255,255,0.3);
-    margin: 0 10px;
-}
-
-.price-list li span:last-child {
-    font-weight: 600;
-    font-family: inherit;
-}
-
-.promo-item {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    opacity: 0.8;
-    font-style: italic;
-}
-
-@media (max-width: 480px) {
-    .pricing {
-        padding: 30px 0;
-    }
-
-    .pricing-header {
-        margin-bottom: 35px;
-        padding: 0 20px;
-    }
-
-    .pricing-header h2 {
-        font-size: 1.6rem;
-        line-height: 1.3;
-    }
-
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 15px;
-    }
-
-    .price-card {
-        padding: 25px 20px;
-        border-radius: 24px;
-    }
-
-    .card-header {
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-    }
-
-    .card-header .material-symbols-outlined {
-        font-size: 2rem;
-    }
-
-    .card-header h3 {
-        font-size: 1.25rem;
-    }
-
-    .price-list li {
-        font-size: 0.95rem;
-        margin-bottom: 14px;
-    }
-
-    .price-list li span:first-child::after {
-        margin: 0 6px;
-    }
-
-    .promo-item {
-        margin-top: 15px;
-        padding-top: 15px;
     }
 }
 

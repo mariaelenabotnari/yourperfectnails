@@ -7,29 +7,32 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="container">
-        <a href="#" class="logo">
-            <img src="img/logo.png" alt="Nail Studio Logo">
-        </a>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container position-relative">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#features">Servicii</a></li>
-                <li><a href="#portfolio">Lucrări</a></li>
-                <li><a href="#pricing">Prețuri</a></li>
-            </ul>
-        </nav>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" class="logo-img">
+            </a>
 
-        <div class="nav-cta">
-            <a href="#bookingPopup" class="btn-primary" onclick="event.preventDefault(); location.hash='bookingPopup';">Programează-te</a>
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Servicii</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#portfolio">Lucrări</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#pricing">Prețuri</a></li>
+                </ul>
+            </div>
+
+            <a class="btn btn-primary book-btn" href="#bookingPopup">Programează-te</a>
+
         </div>
-    </div>
+    </nav>
 </header>
 
 <main>
@@ -133,58 +136,74 @@
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section id="pricing" class="py-5" style="background:#eeedec; scroll-margin-top:100px;">
         <div class="container">
-            <div class="pricing-header">
-                <h2>Prețuri Corecte & Transparență</h2>
-                <p>Alege serviciul potrivit pentru tine și bucură-te de un rezultat impecabil.</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-semibold" style="font-size:2.5rem; color:#090825;">Prețuri Corecte & Transparență</h2>
+                <p class="text-secondary mx-auto" style="max-width: 650px;">
+                    Alege serviciul potrivit pentru tine și bucură-te de un rezultat impecabil.
+                </p>
             </div>
 
-            <div class="pricing-grid">
-                <div class="price-card dark-navy">
-                    <div class="card-header">
-                        <span class="material-symbols-outlined">front_hand</span>
-                        <h3>Manichiură & Îngrijire</h3>
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="h-100 p-4 rounded-4 text-white" style="background:#090825;">
+                        <div class="d-flex align-items-center gap-3 pb-3 mb-4" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+                            <span class="material-symbols-outlined" style="font-size:2.5rem;">front_hand</span>
+                            <h3 class="h5 fw-semibold m-0">Manichiură & Îngrijire</h3>
+                        </div>
+
+                        <ul class="list-unstyled m-0">
+                            <li class="d-flex justify-content-between mb-3"><span>Clasică (ojă)</span><span class="fw-semibold">150 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Manichiură aparat</span><span class="fw-semibold">150 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Manichiură igienică</span><span class="fw-semibold">150 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Pentru bărbați</span><span class="fw-semibold">180 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Parafinoterapie</span><span class="fw-semibold">100 lei</span></li>
+                            <li class="d-flex justify-content-between"><span>Mini-SPA mâini</span><span class="fw-semibold">25 lei</span></li>
+                        </ul>
                     </div>
-                    <ul class="price-list">
-                        <li><span>Clasică (ojă)</span> <span>150 lei</span></li>
-                        <li><span>Manichiură aparat</span> <span>150 lei</span></li>
-                        <li><span>Manichiură igienică</span> <span>150 lei</span></li>
-                        <li><span>Pentru bărbați</span> <span>180 lei</span></li>
-                        <li><span>Parafinoterapie</span> <span>100 lei</span></li>
-                        <li><span>Mini-SPA mâini</span> <span>25 lei</span></li>
-                    </ul>
                 </div>
 
-                <div class="price-card brand-blue-alt">
-                    <div class="card-header">
-                        <span class="material-symbols-outlined">palette</span>
-                        <h3>Acoperire & Stil</h3>
+                <div class="col-12 col-lg-4">
+                    <div class="h-100 p-4 rounded-4 text-white" style="background:#6475E9;">
+                        <div class="d-flex align-items-center gap-3 pb-3 mb-4" style="border-bottom:1px solid rgba(255,255,255,0.18);">
+                            <span class="material-symbols-outlined" style="font-size:2.5rem;">palette</span>
+                            <h3 class="h5 fw-semibold m-0">Acoperire & Stil</h3>
+                        </div>
+
+                        <ul class="list-unstyled m-0">
+                            <li class="d-flex justify-content-between mb-3"><span>Acoperire ojă-gel</span><span class="fw-semibold">200 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Acoperire gel</span><span class="fw-semibold">280 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Corecție ojă-gel</span><span class="fw-semibold">220 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Corecție gel (+igienică)</span><span class="fw-semibold">400 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Corecție gel (fără ig.)</span><span class="fw-semibold">330 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Art-Design / Restaurare</span><span class="fw-semibold">30–50 lei</span></li>
+                            <li class="d-flex justify-content-between"><span>Îndepărtare gel</span><span class="fw-semibold">70 lei</span></li>
+                        </ul>
                     </div>
-                    <ul class="price-list">
-                        <li><span>Acoperire ojă-gel</span> <span>200 lei</span></li>
-                        <li><span>Acoperire gel</span> <span>280 lei</span></li>
-                        <li><span>Corecție ojă-gel</span> <span>220 lei</span></li>
-                        <li><span>Corecție gel (+igienică)</span> <span>400 lei</span></li>
-                        <li><span>Corecție gel (fără ig.)</span> <span>330 lei</span></li>
-                        <li><span>Art-Design / Restaurare</span> <span>30–50 lei</span></li>
-                        <li><span>Îndepărtare gel</span> <span>70 lei</span></li>
-                    </ul>
                 </div>
 
-                <div class="price-card brand-coral">
-                    <div class="card-header">
-                        <span class="material-symbols-outlined">architecture</span>
-                        <h3>Alungire Unghii</h3>
+                <div class="col-12 col-lg-4">
+                    <div class="h-100 p-4 rounded-4 text-white" style="background:#ff7956;">
+                        <div class="d-flex align-items-center gap-3 pb-3 mb-4" style="border-bottom:1px solid rgba(255,255,255,0.18);">
+                            <span class="material-symbols-outlined" style="font-size:2.5rem;">architecture</span>
+                            <h3 class="h5 fw-semibold m-0">Alungire Unghii</h3>
+                        </div>
+
+                        <ul class="list-unstyled m-0">
+                            <li class="d-flex justify-content-between mb-3"><span>Mărimea 1 & 2</span><span class="fw-semibold">350 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Mărimea 3</span><span class="fw-semibold">400 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Mărimea 4</span><span class="fw-semibold">450 lei</span></li>
+                            <li class="d-flex justify-content-between mb-3"><span>Mărimea 5</span><span class="fw-semibold">500 lei</span></li>
+                            <li class="mt-4 pt-3" style="border-top:1px solid rgba(255,255,255,0.18); opacity:0.85; font-style:italic;">
+                                <div class="d-flex justify-content-between">
+                                    <span>Calitate Premium</span><span class="fw-semibold">Inclusă</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="price-list">
-                        <li><span>Mărimea 1 & 2</span> <span>350 lei</span></li>
-                        <li><span>Mărimea 3</span> <span>400 lei</span></li>
-                        <li><span>Mărimea 4</span> <span>450 lei</span></li>
-                        <li><span>Mărimea 5</span> <span>500 lei</span></li>
-                        <li class="promo-item"><span>Calitate Premium</span> <span>Inclusă</span></li>
-                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
