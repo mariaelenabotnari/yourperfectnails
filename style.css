@@ -907,10 +907,20 @@ body:has(.popup-overlay:target) {
     background: #ffffff;
     border: 1px solid rgba(9, 8, 37, 0.08);
     box-shadow: 0 18px 45px rgba(9, 8, 37, 0.18);
-    overflow: hidden;
+
+    overflow: visible;
+    position: relative;
 
     animation: mascotFloat 2.8s ease-in-out infinite;
     transform-origin: 80% 90%;
+}
+
+.mascot-clip {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
 }
 
 .mascot-frame {
@@ -975,4 +985,51 @@ body:has(.popup-overlay:target) {
         transition: none;
         transform: none;
     }
+}
+
+/* SPEECH BUBBLE */
+
+.mascot-card {
+    position: relative;
+}
+
+.mascot-bubble {
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+
+    background: #ffffff;
+    color: #090825;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    width: 200px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+    border: 1px solid rgba(0,0,0,0.08);
+
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+}
+
+.mascot-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 25px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.mascot-card:hover .mascot-bubble {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mascot-card:hover {
+    transform: scale(1.03);
 }
