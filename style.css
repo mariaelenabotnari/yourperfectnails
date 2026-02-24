@@ -186,45 +186,70 @@ body:has(.popup-overlay:target) {
 /* NAVBAR */
 
 .custom-navbar{
-    background-color:#f3f3f3 !important;
+    background:#f3f3f3;
     border-bottom:1px solid #eee;
-    backdrop-filter: blur(10px);
 }
 
-
-.logo-img {
-    height: 70px;
+.nav-desktop{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
 }
 
-.book-btn {
-    margin-left: auto;
+.logo-img{
+    height:70px;
 }
 
-.custom-navbar {
-    background-color: #f3f3f3;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #eee;
+.nav-links{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center;
+    gap:32px;
+
+    list-style:none;
+    margin:0;
+    padding:0;
+
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
 }
 
-.navbar .nav-link {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--dark-navy);
-    transition: color 0.25s ease;
+.nav-links li{
+    display:inline-flex !important;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-    color: #6475E9 !important;
+.nav-links a{
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:600;
+    color:#090825;
+    white-space:nowrap;
+}
+
+.nav-links a:hover{
+    color:#6475E9;
+}
+
+.nav-book-btn{
+    background:#6475E9;
+    color:white;
+    padding:10px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    white-space:nowrap;
 }
 
 @media (max-width: 480px){
 
-    .nav-book-btn {
-        display: none !important;
+    .nav-book-btn{
+        display:none !important;
     }
 
     .nav-mobile-row{
+        position: relative;
         display:flex;
         align-items:center;
         justify-content: space-between;
@@ -232,11 +257,13 @@ body:has(.popup-overlay:target) {
     }
 
     .nav-mobile-links{
+        position: static;
+        transform: none;
+
         display:flex !important;
         flex-direction: row !important;
         align-items:center;
         gap:14px;
-        margin:0;
         padding:0;
     }
 
@@ -250,7 +277,6 @@ body:has(.popup-overlay:target) {
     .logo-img{
         height:54px;
     }
-
 }
 
 /* HERO */
