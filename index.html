@@ -292,6 +292,24 @@
     </div>
 </div>
 
+<!-- The mascot -->
+<div class="mascot" id="mascot" aria-label="Mascot">
+    <div class="mascot-card">
+        <!-- Two frames stacked -->
+        <img class="mascot-frame frame-1" src="img/mascot_initial_position.png" alt="Mascot hand down">
+        <img class="mascot-frame frame-2" src="img/mascot_second_position.png" alt="Mascot peace sign">
+    </div>
+</div>
+
+<script>
+    // Show mascot after delay
+    window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            document.getElementById("mascot")?.classList.add("is-visible");
+        }, 2500); // 2.5 seconds delay
+    });
+</script>
+
 </body>
 </html>
 
